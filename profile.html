@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="Netflix-assets/Netflix-assets/scss-css/style-profile.css"
+    />
+    <title>PROFILE</title>
+  </head>
+  <body class="profile">
+    <header class="mb-5">
+      <img
+        src="Netflix-assets/Netflix-assets/assets/netflix_logo.png"
+        width="150px"
+        alt=""
+      />
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 mx-auto">
+            <h1 class="h1 display-3 fw-semibold">Edit Profile</h1>
+            <hr />
+            <div
+              class="container-fluid d-flex align-items-between gap-3 flex-wrap info-settings"
+            >
+              <div class="profile-img position-relative">
+                <img
+                  src="Netflix-assets/Netflix-assets/assets/kids_icon.png"
+                  width="130px"
+                  alt=""
+                />
+                <span
+                  class="p-0 position-absolute bottom-0 start-0 ms-3 mb-2 badge translate-middle-x bg-black border border-light rounded-circle"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    fill="currentColor"
+                    class="bi bi-pencil-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div class="col d-flex flex-column justify-content-between">
+                <p
+                  class="bg-secondary py-2 px-2 my-1 text-white font-monospace"
+                >
+                  Strive Student
+                </p>
+                <div class="language-selector">
+                  <p class="m-0 h5 pb-2">Language</p>
+                  <div class="dropdown">
+                    <button
+                      type="button"
+                      class="btn btn-dark language-selector d-flex align-items-center justify-content-between dropdown-toggle border border-1 rounded-0 genres-dropdown border-white"
+                      data-bs-toggle="dropdown"
+                    >
+                      English
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Italian</a></li>
+                      <li><a class="dropdown-item" href="#">African</a></li>
+                      <li><a class="dropdown-item" href="#">C++</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col offset-3 ps-4 maturity-column">
+              <div class="maturity-settings ms-3">
+                <hr class="my-4" />
+                <p class="m-0 h4">Maturity Settings:</p>
+                <button class="btn secondary-darker rounded-0 fw-semibold my-3">
+                  ALL MATURITY RATINGS
+                </button>
+                <p class="small mb-3">
+                  Show titles of <b>all maturity ratings</b> for this profile.
+                </p>
+                <button
+                  class="btn btn-outline-secondary rounded-0 font-monospace px-3 edit-maturity-btn"
+                >
+                  EDIT
+                </button>
+                <hr />
+              </div>
+            </div>
+            <div class="col offset-3 ps-4 mb-3">
+              <div class="autoplay-controls ms-3">
+                <form>
+                  <p class="m-0 h4">Autoplay controls:</p>
+                  <div
+                    class="input d-flex align-items-center justify-content-start mt-3"
+                  >
+                    <label for="autoplay-episode" class="small d-block label"
+                      >Autoplay next episode in a series on all devices.
+                      <input
+                        type="checkbox"
+                        id="autoplay-episode"
+                        class="me-2" />
+                      <span class="checkmark"></span
+                    ></label>
+                  </div>
+                  <div
+                    class="input d-flex align-items-center justify-content-start"
+                  >
+                    <label
+                      for="autoplay-preview-episode"
+                      class="small d-block label"
+                      >Autoplay next episode in a series on all devices.
+                      <input
+                        type="checkbox"
+                        id="autoplay-preview-episode"
+                        class="me-2" />
+                      <span class="checkmark"></span
+                    ></label>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <hr />
+            <div class="row p-0 container-fluid ms-lg-1 mb-5">
+              <div class="col d-flex gap-3 p-0 ms-3 save">
+                <button class="btn btn-outline-light flex-shrink-1 rounded-0">
+                  SAVE
+                </button>
+                <button class="btn btn-outline-light flex-shrink-1 rounded-0">
+                  CANCEL
+                </button>
+                <button
+                  class="btn btn-outline-light flex-shrink-1 rounded-0 flex-grow-1"
+                >
+                  DELETE PROFILE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="script/script.js"></script>
+  </body>
+</html>

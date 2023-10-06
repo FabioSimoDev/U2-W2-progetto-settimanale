@@ -1,0 +1,96 @@
+// i miei partials
+@import '../partials/variables';
+@import '../partials/colors';
+
+
+// variabili e colori di bootstrap (per modificarli)
+@import 'bootstrap/bootstrap/bootstrap-5.3.2/scss/functions';
+@import 'bootstrap/bootstrap/bootstrap-5.3.2/scss/variables';
+@import 'bootstrap/bootstrap/bootstrap-5.3.2/scss/variables-dark';
+
+
+// bootstrap
+@import 'bootstrap/bootstrap/bootstrap-5.3.2/scss/bootstrap.scss';
+
+
+
+// altri stili
+// media query
+@import 'bootstrap/bootstrap/bootstrap-5.3.2/scss/mixins';
+
+@include media-breakpoint-up(lg){
+    .carousel-item{
+        flex: 0 0 16.66666666666667%;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        width: 6vh;
+        height: 6vh;
+    }
+}
+
+@include media-breakpoint-only(md){
+    .carousel-item{
+        flex: 0 0 25%;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        width: 5vh;
+        height: 5vh;
+    }
+}
+
+@include media-breakpoint-down(md){
+    .carousel-item{
+        flex: 0 0 50%;
+    }
+    .genres-dropdown{
+        font-size: 12px;
+    }
+    .h1{
+        font-size: calc(1rem + 1.5vw);
+    }
+    .social{
+        justify-content: center;
+    }
+    footer.container{
+        width: 100% !important;
+    }
+    .button-service-code{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .link-secondary{
+        font-size: 0.7rem;
+    }
+    .navbar-brand img{
+        width: 70px;
+    }
+    .nav-right-container{
+        svg{
+            width: 12px;
+        }
+        img{
+            width: 30px;
+        }
+    }
+    .navbar-toggler{
+        display: flex;
+        justify-content: center;
+        width: 40px;
+        span{
+            width: 30px;
+        }
+    }
+    .carousel-control-prev, .carousel-control-next{
+        width: 4vh;
+        height: 4vh;
+    }
+}
+
+
+
+.carousel-control-prev, .carousel-control-next{
+    background-color: $carousel-arrows-bg;
+}
+

@@ -1,0 +1,129 @@
+@import '../partials/variables';
+@import '../partials/colors';
+
+
+// variabili e colori di bootstrap (per modificarli)
+@import 'bootstrap/bootstrap/bootstrap-5.3.2/scss/functions';
+@import 'bootstrap/bootstrap/bootstrap-5.3.2/scss/variables';
+@import 'bootstrap/bootstrap/bootstrap-5.3.2/scss/variables-dark';
+
+
+// bootstrap
+@import 'bootstrap/bootstrap/bootstrap-5.3.2/scss/bootstrap.scss';
+
+
+
+// altri stili
+// media query
+@import 'bootstrap/bootstrap/bootstrap-5.3.2/scss/mixins';
+
+button.language-selector{
+    height: 35px;
+    width: 45%;
+}
+
+.badge{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.secondary-darker{
+    background-color: $secondary-darker;
+}
+
+.profile label{
+    white-space: nowrap;
+}
+
+.label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+        border: 1px solid $secondary;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+    input:checked ~ .checkmark:after {
+        display: block;
+    }
+    .checkmark:after {
+        left: 8px;
+        top: 4px;
+        width: 7px;
+        height: 13px;
+        border: solid $secondary;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    &:hover input ~ .checkmark {
+        background-color: $gray-600;
+      }
+      
+    input:checked ~ .checkmark {
+        background-color: transparent;
+      }
+  }
+
+  @include media-breakpoint-down(lg){
+    .profile *{
+        text-align: center;
+    }
+    .info-settings{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    button.language-selector{
+        height: 35px;
+        width: 100px;
+    }
+    div.language-selector{
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .col.offset-3{
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    .edit-maturity-btn{
+        width: 65%;
+    }
+    .maturity-settings, .autoplay-controls{
+        margin: 0 !important;
+    }
+  }
+
+  .profile header{
+    text-align: left;
+    background: $header-background;
+  }
