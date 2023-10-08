@@ -18,13 +18,14 @@
               <img
                 src="/Netflix-assets/Netflix-assets/assets/netflix_logo.png"
                 width="80px"
+                class="logo"
                 alt="logo"
               />
             </a>
             <div
-              class="d-flex align-items-center order-lg-3 gap-3 nav-right-container"
+              class="d-flex align-items-center order-lg-3 gap-3 nav-right-container pop-anim z-1"
             >
-              <div class="search">
+              <div class="search d-flex align-items-center" tabindex="1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -37,8 +38,9 @@
                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
                   />
                 </svg>
+                <input type="text" class="" />
               </div>
-              <div class="right-link">
+              <div class="right-link d-none d-sm-block">
                 <a class="nav-link">Kids</a>
               </div>
               <div class="bell">
@@ -65,15 +67,25 @@
                     <img
                       src="/Netflix-assets/Netflix-assets/assets/avatar.png"
                       width="40px"
+                      height="40px"
                       alt="Icona Dropdown"
                     />
                   </button>
                   <ul class="dropdown-menu">
-                    <li>
+                    <li class="profile-dropdown-item">
                       <a class="dropdown-item" href="profile.html">Profilo</a>
                     </li>
-                    <li><a class="dropdown-item" href="#">Q&A</a></li>
-                    <li><a class="dropdown-item" href="#">Log-Out</a></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        target="_blank"
+                        href="https://help.netflix.com/it"
+                        >Q&A</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item log-out-btn" href="#">Log-Out</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -586,7 +598,7 @@
             width="24"
             height="24"
             fill="#808080"
-            class="bi bi-facebook"
+            class="bi bi-facebook social-icon"
             viewBox="0 0 16 16"
           >
             <path
@@ -597,6 +609,7 @@
             src="Netflix-assets/Netflix-assets/assets/183-1837169_instagram-png.svg"
             width="24px"
             height="24px"
+            class="social-icon"
             alt=""
           />
           <svg
@@ -604,7 +617,7 @@
             width="24px"
             height="24px"
             fill="#808080"
-            class="bi bi-twitter"
+            class="bi bi-twitter social-icon"
             viewBox="0 0 16 16"
           >
             <path
@@ -616,7 +629,7 @@
             width="24px"
             height="24px"
             fill="#808080"
-            class="bi bi-youtube"
+            class="bi bi-youtube social-icon"
             viewBox="0 0 16 16"
           >
             <path

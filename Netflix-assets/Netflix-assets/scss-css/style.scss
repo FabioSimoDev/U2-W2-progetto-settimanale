@@ -94,3 +94,88 @@
     background-color: $carousel-arrows-bg;
 }
 
+
+@import '../partials/anim';
+.logo {
+    opacity: 0;
+    animation: fadeInFromLeft $logo-anim-duration ease-in-out;
+    animation-fill-mode: forwards; 
+  }
+
+
+  .nav-item{
+    opacity: 0;
+    animation: fadeInFromUp $nav-item-anim-duration ease-in-out;
+    animation-fill-mode: forwards;
+    @for $i from 1 through 5{
+        &:nth-of-type(#{$i}){
+            animation-delay: 0.7s + ($i * 0.1);
+        }
+    }
+  }
+
+  @for $i from 1 through 4{
+  .pop-anim div:nth-child(#{$i}){
+    transform: scale(0);
+    animation: pop-up $nav-item-anim-duration ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1.6s + ($i * 0.1);;
+  }
+}
+
+.social-icon:hover{
+    fill: white;
+    color: white;
+}
+
+.search{
+    svg, input{
+        transition: all 0.3s ease;
+    }
+    svg{
+        order: 2;
+    }
+    input{
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        visibility: hidden;
+        border: 1px solid transparent;
+        order: 1;
+    }
+    &:focus{
+        svg{
+            fill: white;
+            order: 1;
+        }
+        input{
+            display: inline !important;
+            max-height: 100px;
+            max-width: 100px;
+            opacity: 1;
+            visibility: visible;
+            order: 2;
+            margin-left: 5px;
+        }
+    }
+    input:focus{
+        outline: 0;
+        display: inline !important;
+        max-height: 100px;
+        max-width: 100px;
+        opacity: 1;
+        visibility: visible;
+        order: 2;
+        margin-left: 5px;
+    }
+}
+
+.card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 30px black !important;
+    }
+}
+
+

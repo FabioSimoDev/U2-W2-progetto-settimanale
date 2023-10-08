@@ -43,9 +43,6 @@ button.language-selector{
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 
     input {
@@ -123,7 +120,51 @@ button.language-selector{
     }
   }
 
+  @include media-breakpoint-down(sm){
+    .save{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        & :nth-child(1), :nth-child(2){
+            width: 45%;
+        }
+        & button{
+            font-size: 12px;
+        }
+    }
+    .autoplay-controls{
+        & label{
+            white-space: normal;
+            text-align: left;
+            & .checkmark{
+                top: 25%;
+            }
+        }
+    }
+  }
+
   .profile header{
     text-align: left;
     background: $header-background;
   }
+
+//   input del nome
+input[type="text"]{
+    outline: 0;
+    border: 1px solid transparent;
+}
+
+// immagine profilo
+.profile-img{
+    cursor: pointer;
+    & span{
+        transition: width 0.2s ease, height 0.2s ease;
+        &:hover{
+            width: 28px;
+            height: 28px;
+            & svg{
+                transition: transform 0.2s ease;
+                transform: scale(1.3);
+            }
+        }
+    }
+}

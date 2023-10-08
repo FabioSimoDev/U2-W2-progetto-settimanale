@@ -11,16 +11,17 @@
   </head>
   <body class="profile">
     <header class="mb-5">
-      <img
-        src="Netflix-assets/Netflix-assets/assets/netflix_logo.png"
-        width="150px"
-        alt=""
-      />
+      <a href="index.html">
+        <img
+          src="Netflix-assets/Netflix-assets/assets/netflix_logo.png"
+          width="150px"
+          alt=""
+      /></a>
     </header>
     <main>
       <div class="container">
         <div class="row">
-          <div class="col-6 mx-auto">
+          <div class="col-lg-6 col-sm-8 col-9 mx-auto">
             <h1 class="h1 display-3 fw-semibold">Edit Profile</h1>
             <hr />
             <div
@@ -30,6 +31,7 @@
                 <img
                   src="Netflix-assets/Netflix-assets/assets/kids_icon.png"
                   width="130px"
+                  height="130px"
                   alt=""
                 />
                 <span
@@ -37,8 +39,8 @@
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
+                    width="12px"
+                    height="12px"
                     fill="currentColor"
                     class="bi bi-pencil-fill"
                     viewBox="0 0 16 16"
@@ -50,11 +52,11 @@
                 </span>
               </div>
               <div class="col d-flex flex-column justify-content-between">
-                <p
+                <input
+                  type="text"
                   class="bg-secondary py-2 px-2 my-1 text-white font-monospace"
-                >
-                  Strive Student
-                </p>
+                  value="Strive Student"
+                />
                 <div class="language-selector">
                   <p class="m-0 h5 pb-2">Language</p>
                   <div class="dropdown">
@@ -128,17 +130,25 @@
             <hr />
             <div class="row p-0 container-fluid ms-lg-1 mb-5">
               <div class="col d-flex gap-3 p-0 ms-3 save">
-                <button class="btn btn-outline-light flex-shrink-1 rounded-0">
-                  SAVE
-                </button>
-                <button class="btn btn-outline-light flex-shrink-1 rounded-0">
-                  CANCEL
-                </button>
-                <button
-                  class="btn btn-outline-light flex-shrink-1 rounded-0 flex-grow-1"
+                <a href="index.html" class=""
+                  ><button
+                    class="btn btn-outline-light flex-shrink-1 rounded-0 w-100"
+                  >
+                    SAVE
+                  </button></a
                 >
-                  DELETE PROFILE
-                </button>
+                <a href="index.html" class=""
+                  ><button
+                    class="btn btn-outline-light flex-shrink-1 rounded-0 w-100"
+                  >
+                    CANCEL
+                  </button></a
+                >
+                <a href="#" class="flex-grow-1"
+                  ><button class="btn btn-outline-light rounded-0 w-100">
+                    DELETE PROFILE
+                  </button></a
+                >
               </div>
             </div>
           </div>
@@ -146,6 +156,6 @@
       </div>
     </main>
     <script src="script/bootstrap.bundle.min.js"></script>
-    <script src="script/script.js"></script>
+    <script src="script/profile-script.js"></script>
   </body>
 </html>
